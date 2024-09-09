@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".VisaoGeral">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tblSuperiorVG"
+        android:layout_width="416dp"
+        android:layout_height="112dp"
+        android:background="#338B85"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btnPopupMenu"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="end"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/baseline_more_vert_24"
+        app:layout_constraintBottom_toBottomOf="@+id/tblSuperiorVG"
+        app:layout_constraintEnd_toEndOf="@+id/tblSuperiorVG"
+        app:layout_constraintHorizontal_bias="0.989"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tblSuperiorVG"
+        app:layout_constraintVertical_bias="0.562" />
+
+    <TextView
+        android:id="@+id/txtVisaoGeral"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Visão Geral"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.052"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tblSuperiorVG" />
+
+
+    <ImageView
+        android:id="@+id/imgBanner"
+        android:layout_width="350dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/transparent"
+        app:srcCompat="@drawable/bannerpadrao"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtVisaoGeral"
+
+        />
+
+
+    <ImageButton
+        android:id="@+id/imgbtnMudarBanner"
+        android:layout_width="100dp"
+        android:layout_height="78dp"
+        android:background="@android:color/transparent"
+        android:backgroundTint="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/imgBanner"
+        app:layout_constraintEnd_toEndOf="@+id/imgBanner"
+        app:layout_constraintStart_toStartOf="@+id/imgBanner"
+        app:layout_constraintTop_toTopOf="@+id/imgBanner"
+        app:layout_constraintVertical_bias="0.609"
+        app:srcCompat="@drawable/adcbanneran"
+        android:foregroundGravity="center"/>
+
+    <TextView
+        android:id="@+id/txtNomeDoEvento"
+        android:layout_width="118dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:text="Nome do evento:"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgBanner" />
+
+
+    <EditText
+        android:id="@+id/txtMostraNomeDoEvento"
+        android:layout_width="210dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/white"
+        android:enabled="false"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@+id/txtNomeDoEvento"
+        app:layout_constraintTop_toBottomOf="@+id/imgBanner" />
+
+
+    <ImageButton
+        android:id="@+id/imgbtnAlterarNome"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/white"
+        android:onClick="onClick"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.457"
+        app:layout_constraintStart_toEndOf="@+id/txtMostraNomeDoEvento"
+        app:layout_constraintTop_toBottomOf="@+id/imgBanner"
+        app:srcCompat="@drawable/editarinformacoes" />
+
+
+    <ImageButton
+        android:id="@+id/imgbtnAlterarData"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.872"
+        app:layout_constraintStart_toEndOf="@+id/txtMostraDataDoEvento"
+        app:layout_constraintTop_toBottomOf="@+id/imgbtnAlterarLocal"
+        app:srcCompat="@drawable/editarinformacoes" />
+
+    <ImageButton
+        android:id="@+id/imgbtnAlterarHorarioInicio"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.703"
+        app:layout_constraintStart_toEndOf="@+id/txtMostraHoraDeInicioEvento"
+        app:layout_constraintTop_toBottomOf="@+id/imgbtnAlterarData"
+        app:srcCompat="@drawable/editarinformacoes" />
+
+    <ImageButton
+        android:id="@+id/imgbtnEditarHoraDeTermino"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintStart_toEndOf="@+id/txtMostraHoraDeTerminoEvento"
+        app:layout_constraintTop_toBottomOf="@+id/imgbtnAlterarHorarioInicio"
+        app:srcCompat="@drawable/editarinformacoes" />
+
+
+    <ImageButton
+        android:id="@+id/imgbtnEditarTipoEvento"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintStart_toEndOf="@+id/txtMostraTipoDoEvento"
+        app:layout_constraintTop_toBottomOf="@+id/imgbtnEditarHoraDeTermino"
+        app:srcCompat="@drawable/editarinformacoes" />
+
+
+    <ImageButton
+        android:id="@+id/imgbtnAlterarLocal"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtMostraLocalDoEvento"
+        app:layout_constraintTop_toBottomOf="@+id/imgbtnAlterarNome"
+        app:srcCompat="@drawable/editarinformacoes" />
+
+
+    <TextView
+        android:id="@+id/txtLocalDoEvento"
+        android:layout_width="wrap_content"
+        android:layout_height="26dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="5dp"
+        android:text="Local:"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNomeDoEvento" />
+
+
+    <EditText
+        android:id="@+id/txtMostraLocalDoEvento"
+        android:layout_width="285dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/white"
+        android:editable="false"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@+id/txtLocalDoEvento"
+        app:layout_constraintTop_toBottomOf="@+id/txtMostraNomeDoEvento" />
+
+    <TextView
+        android:id="@+id/txtDataDoEvento"
+        android:layout_width="wrap_content"
+        android:layout_height="26dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="5dp"
+        android:text="Data:"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtLocalDoEvento" />
+
+
+    <EditText
+        android:id="@+id/txtMostraDataDoEvento"
+        android:layout_width="210dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="5dp"
+
+        android:background="@color/white"
+        android:editable="false"
+        app:layout_constraintStart_toEndOf="@+id/txtDataDoEvento"
+        app:layout_constraintTop_toBottomOf="@+id/txtMostraLocalDoEvento" />
+
+
+    <TextView
+        android:id="@+id/txtHoraDeInicioEvento"
+        android:layout_width="wrap_content"
+        android:layout_height="26dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="5dp"
+        android:text="Hora de Início:"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtDataDoEvento" />
+
+
+    <EditText
+        android:id="@+id/txtMostraHoraDeInicioEvento"
+        android:layout_width="210dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/white"
+        android:textColor="@color/black"
+        android:editable="false"
+        app:layout_constraintStart_toEndOf="@+id/txtHoraDeInicioEvento"
+        app:layout_constraintTop_toBottomOf="@+id/txtMostraDataDoEvento" />
+
+
+    <TextView
+        android:id="@+id/txtHoraDeTerminoEvento"
+        android:layout_width="wrap_content"
+        android:layout_height="26dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="5dp"
+        android:text="Hora de Término:"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtHoraDeInicioEvento" />
+
+
+    <EditText
+        android:id="@+id/txtMostraHoraDeTerminoEvento"
+        android:layout_width="210dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/white"
+        android:textColor="@color/black"
+        android:editable="false"
+        app:layout_constraintStart_toEndOf="@+id/txtHoraDeTerminoEvento"
+        app:layout_constraintTop_toBottomOf="@+id/txtMostraHoraDeInicioEvento" />
+
+
+    <TextView
+        android:id="@+id/txtTipoDoEvento"
+        android:layout_width="wrap_content"
+        android:layout_height="26dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="5dp"
+        android:text="Tipo do Evento:"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtHoraDeTerminoEvento" />
+
+
+    <EditText
+        android:id="@+id/txtMostraTipoDoEvento"
+        android:layout_width="220dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/black"
+        android:background="@color/white"
+        android:editable="false"
+        app:layout_constraintStart_toEndOf="@+id/txtTipoDoEvento"
+        app:layout_constraintTop_toBottomOf="@+id/txtMostraHoraDeTerminoEvento" />
+
+
+    <TextView
+        android:id="@+id/txtHorasComplementaresEvento"
+        android:layout_width="wrap_content"
+        android:layout_height="26dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="5dp"
+        android:text="Horas Complementares:"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTipoDoEvento" />
+
+
+    <EditText
+        android:id="@+id/txtMostraHorasComplementaresEvento"
+        android:layout_width="150dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/white"
+        android:textColor="@color/black"
+        android:editable="false"
+        app:layout_constraintStart_toEndOf="@+id/txtHorasComplementaresEvento"
+        app:layout_constraintTop_toBottomOf="@+id/txtMostraTipoDoEvento" />
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tblInferiorVG"
+        android:layout_width="411dp"
+        android:layout_height="65dp"
+        android:background="#338B85"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imgbtnCriarCronograma"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/white"
+        android:onClick="setOnClickListener"
+        app:layout_constraintBottom_toTopOf="@+id/tblInferiorVG"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.954"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/cronograma___copia" />
+
+    <ImageButton
+        android:id="@+id/imgbtnTelaInicial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="#338B85"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/telainicial" />
+
+    <ImageButton
+        android:id="@+id/imgbtnFavoritos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="8dp"
+        android:background="#338B85"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgbtnTelaInicial"
+        app:layout_constraintTop_toTopOf="@+id/tblInferiorVG"
+        app:layout_constraintVertical_bias="0.888"
+        app:srcCompat="@drawable/favoritar" />
+
+    <ImageButton
+        android:id="@+id/imgbtnCriarEvento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:background="#338B85"
+        android:onClick="telaAcessarCriarEvento"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgbtnFavoritos"
+        app:layout_constraintTop_toTopOf="@+id/tblInferiorVG"
+        app:layout_constraintVertical_bias="0.608"
+        app:srcCompat="@drawable/criar" />
+
+    <ImageButton
+        android:id="@+id/imgbtnVisaoVisaoGeral"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:background="#338B85"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgbtnCriarEvento"
+        app:layout_constraintTop_toTopOf="@+id/tblInferiorVG"
+        app:layout_constraintVertical_bias="0.65"
+        app:srcCompat="@drawable/visaogeral" />
+
+    <ImageButton
+        android:id="@+id/imgbtnPerfil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:background="#338B85"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.711"
+        app:layout_constraintStart_toEndOf="@+id/imgbtnVisaoVisaoGeral"
+        app:layout_constraintTop_toTopOf="@+id/tblInferiorVG"
+        app:layout_constraintVertical_bias="0.565"
+        app:srcCompat="@drawable/perfil" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

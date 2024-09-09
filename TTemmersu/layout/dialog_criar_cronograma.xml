@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Spinner
+            android:id="@+id/spinnerTipoAtividade"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="8dp"
+            android:entries="@array/datas_array" />
+
+        <LinearLayout
+            android:id="@+id/activityContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!-- Campos iniciais para a atividade -->
+            <LinearLayout
+                android:id="@+id/initialActivityLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="8dp">
+
+                <EditText
+                    android:id="@+id/edtHorario"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:hint="Horário (hh:mm)"
+                    android:inputType="time"
+                    android:maxLength="5"
+                    android:layout_marginBottom="8dp"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/edtNomeAtividade"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:hint="Nome da Atividade"
+                    android:inputType="text"
+                    android:layout_marginBottom="8dp"
+                    android:textColor="@android:color/black" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="8dp">
+
+            <Button
+                android:id="@+id/btnAddActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:backgroundTint="#338B85"
+                android:text="Adicionar Nova Atividade"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btnAddNewDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#338B85"
+                android:text="Adicionar Nova Data"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

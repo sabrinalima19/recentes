@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MeusEventosCriador">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tblSuperiorME"
+        android:layout_width="416dp"
+        android:layout_height="112dp"
+        android:background="#338B85"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tblInferiorME"
+        android:layout_width="411dp"
+        android:layout_height="65dp"
+        android:background="#338B85"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageButton
+        android:id="@+id/imgbtnTelaInicial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="8dp"
+        android:background="#338B85"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tblInferiorME"
+        app:layout_constraintVertical_bias="0.916"
+        app:srcCompat="@drawable/telainicial" />
+
+    <ImageButton
+        android:id="@+id/imgbtnFavoritos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="8dp"
+        android:background="#338B85"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgbtnTelaInicial"
+        app:layout_constraintTop_toTopOf="@+id/tblInferiorME"
+        app:layout_constraintVertical_bias="0.888"
+        app:srcCompat="@drawable/favoritar" />
+
+    <ImageButton
+        android:id="@+id/imgbtnCriarEvento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:background="#338B85"
+        android:onClick="IrCriarEvento"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgbtnFavoritos"
+        app:layout_constraintTop_toTopOf="@+id/tblInferiorME"
+        app:layout_constraintVertical_bias="0.608"
+        app:srcCompat="@drawable/criar" />
+
+    <ImageButton
+        android:id="@+id/imgbtnVisaoVisaoGeral"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:background="#338B85"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgbtnCriarEvento"
+        app:layout_constraintTop_toTopOf="@+id/tblInferiorME"
+        app:layout_constraintVertical_bias="0.65"
+        app:srcCompat="@drawable/visaogeral" />
+
+    <ImageButton
+        android:id="@+id/imgbtnPerfil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:background="#338B85"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.711"
+        app:layout_constraintStart_toEndOf="@+id/imgbtnVisaoVisaoGeral"
+        app:layout_constraintTop_toTopOf="@+id/tblInferiorME"
+        app:layout_constraintVertical_bias="0.565"
+        app:srcCompat="@drawable/perfil" />
+
+    <TextView
+        android:id="@+id/txtMeusEventos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Meus Eventos"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tblSuperiorME"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.692" />
+
+    <Button
+        android:id="@+id/btnParticipante"
+        android:layout_width="167dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#A4D1CE"
+        android:onClick="IrTelaParticipante"
+        android:text="Participante"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tblSuperiorME" />
+
+    <Button
+        android:id="@+id/btnCriador"
+        android:layout_width="167dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="28dp"
+        android:backgroundTint="#338B85"
+        android:text="Criador"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/btnParticipante"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.833"
+        app:layout_constraintStart_toEndOf="@+id/btnParticipante"
+        app:layout_constraintTop_toBottomOf="@+id/tblSuperiorME"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/txtSeusProximosEventos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="20dp"
+        android:text="Seus próximos eventos"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.117"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnParticipante" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/tblInferiorME"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtSeusProximosEventos"
+        app:layout_constraintVertical_bias="0.042">
+
+        <LinearLayout
+            android:id="@+id/eventosContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp"/>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
